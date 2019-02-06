@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BLQ-7n-9IN">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tJl-81-Zw7">
+            <objects>
+                <viewController id="BLQ-7n-9IN" customClass="ViewController" customModule="CoreAnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yo6-Wz-xed">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gFl-3A-JVF">
+                                <rect key="frame" x="107" y="84" width="200" height="774"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-Vl-jV1">
+                                        <rect key="frame" x="18.666666666666671" y="0.0" width="163" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="CABasicAnimation"/>
+                                        <connections>
+                                            <action selector="didTapBasicAnimation:" destination="BLQ-7n-9IN" eventType="touchUpInside" id="18B-Gc-wtc"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGi-Iq-aZE">
+                                        <rect key="frame" x="0.0" y="46" width="200" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="G9w-nr-pTp"/>
+                                            <constraint firstAttribute="height" constant="140" id="jzs-Fq-9vX"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kl4-bC-pC1">
+                                        <rect key="frame" x="1" y="196" width="198" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="CAKeyframeAnimation"/>
+                                        <connections>
+                                            <action selector="didTapKeyframeAnimation:" destination="BLQ-7n-9IN" eventType="touchUpInside" id="rKL-rO-0aj"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyO-Zw-7Oz">
+                                        <rect key="frame" x="0.0" y="242" width="200" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="TDO-Sv-wp5"/>
+                                            <constraint firstAttribute="width" constant="200" id="e7A-ik-ZGi"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Zn-qa-KXu">
+                                        <rect key="frame" x="14" y="392" width="172" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="CASpringAnimation"/>
+                                        <connections>
+                                            <action selector="didTapSpringAnimation:" destination="BLQ-7n-9IN" eventType="touchUpInside" id="LFM-8O-90s"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hA-GM-4ea">
+                                        <rect key="frame" x="0.0" y="438" width="200" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="9da-nf-oIz"/>
+                                            <constraint firstAttribute="height" constant="140" id="jWK-jy-2H7"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR7-pT-Z5d">
+                                        <rect key="frame" x="45" y="588" width="110" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="CATransition"/>
+                                        <connections>
+                                            <action selector="didTapTransition:" destination="BLQ-7n-9IN" eventType="touchUpInside" id="0lP-8e-agG"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gm3-Iy-YMj">
+                                        <rect key="frame" x="0.0" y="634" width="200" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="NEP-fo-psD"/>
+                                            <constraint firstAttribute="height" constant="140" id="T2c-S9-mtP"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gFl-3A-JVF" firstAttribute="centerX" secondItem="yo6-Wz-xed" secondAttribute="centerX" id="ldb-hi-PdP"/>
+                            <constraint firstItem="gFl-3A-JVF" firstAttribute="top" secondItem="1ch-lO-Gqs" secondAttribute="top" constant="40" id="nzf-g8-hl4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1ch-lO-Gqs"/>
+                    </view>
+                    <connections>
+                        <outlet property="basicAnimationView" destination="RGi-Iq-aZE" id="kOh-kl-VhD"/>
+                        <outlet property="keyframeAnimationView" destination="gyO-Zw-7Oz" id="tih-mx-9zU"/>
+                        <outlet property="springAnimationView" destination="7hA-GM-4ea" id="1bP-W9-OC2"/>
+                        <outlet property="transitionView" destination="Gm3-Iy-YMj" id="kE1-gk-kCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6W-Uq-CZf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="2"/>
+        </scene>
+    </scenes>
+</document>
