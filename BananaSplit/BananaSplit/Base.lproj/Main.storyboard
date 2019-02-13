@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HPm-XO-6bn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="AeN-ix-RWX">
+            <objects>
+                <viewController id="Tub-27-Wls" customClass="DetailViewController" customModule="BananaSplit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GGZ-c8-Tbh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ice-cream" translatesAutoresizingMaskIntoConstraints="NO" id="hdi-aK-Rck">
+                                <rect key="frame" x="67.5" y="94" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="nOP-Xh-0OF"/>
+                                    <constraint firstAttribute="width" secondItem="hdi-aK-Rck" secondAttribute="height" multiplier="1:1" id="qSM-tL-qHe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ice Cream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0B-e4-Z3X">
+                                <rect key="frame" x="121" y="354" width="133" height="32.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u0B-e4-Z3X" firstAttribute="centerX" secondItem="hdi-aK-Rck" secondAttribute="centerX" id="Lko-oR-Iwz"/>
+                            <constraint firstItem="u0B-e4-Z3X" firstAttribute="top" secondItem="hdi-aK-Rck" secondAttribute="bottom" constant="20" id="MCM-ic-5JV"/>
+                            <constraint firstItem="hdi-aK-Rck" firstAttribute="centerX" secondItem="GGZ-c8-Tbh" secondAttribute="centerX" id="ppU-5Q-ZdZ"/>
+                            <constraint firstItem="hdi-aK-Rck" firstAttribute="top" secondItem="OgZ-iB-wiI" secondAttribute="top" constant="30" id="t73-W2-3a3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OgZ-iB-wiI"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="hdi-aK-Rck" id="dFP-AD-cf8"/>
+                        <outlet property="label" destination="u0B-e4-Z3X" id="q0d-Jc-WbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDP-nm-gNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733.60000000000002" y="457.42128935532236"/>
+        </scene>
+        <!--Ingredients-->
+        <scene sceneID="DHf-4h-DQY">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="fc7-4c-nTQ" customClass="MasterViewController" customModule="BananaSplit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QVo-g3-fEP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="IngredientCell" rowHeight="62" id="MiE-9D-Pia" customClass="IngredientTableViewCell" customModule="BananaSplit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="62"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MiE-9D-Pia" id="uPn-LZ-xHe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaT-ol-xQk">
+                                            <rect key="frame" x="16" y="21" width="323" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="QaT-ol-xQk" secondAttribute="trailing" constant="20" id="D2A-Rv-mTi"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="QaT-ol-xQk" secondAttribute="bottom" constant="10" id="Mb7-aT-cdN"/>
+                                        <constraint firstItem="QaT-ol-xQk" firstAttribute="leading" secondItem="uPn-LZ-xHe" secondAttribute="leadingMargin" id="asK-uT-CDB"/>
+                                        <constraint firstItem="QaT-ol-xQk" firstAttribute="top" secondItem="uPn-LZ-xHe" secondAttribute="topMargin" constant="10" id="bcD-p2-eCu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ingredientLabel" destination="QaT-ol-xQk" id="MAL-mT-IUp"/>
+                                    <segue destination="Tub-27-Wls" kind="showDetail" id="B2I-cm-kHO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fc7-4c-nTQ" id="gTQ-Fd-ped"/>
+                            <outlet property="delegate" destination="fc7-4c-nTQ" id="UeM-OE-IOt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Ingredients" id="Xm7-xv-C3a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2t-ly-dsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669.5999999999999" y="-303.59820089955025"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mcB-6q-9te">
+            <objects>
+                <navigationController id="aUX-Uw-rV3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wLs-ac-TS1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fc7-4c-nTQ" kind="relationship" relationship="rootViewController" id="7wM-gF-dMF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OgZ-TZ-10i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="-303"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="ecx-Pm-MbM">
+            <objects>
+                <splitViewController id="HPm-XO-6bn" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="aUX-Uw-rV3" kind="relationship" relationship="masterViewController" id="Hza-Sp-J0M"/>
+                        <segue destination="Tub-27-Wls" kind="relationship" relationship="detailViewController" id="shw-gE-s6r"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FSe-L9-nEE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ice-cream" width="1125" height="843.75"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="shw-gE-s6r"/>
+    </inferredMetricsTieBreakers>
+</document>
