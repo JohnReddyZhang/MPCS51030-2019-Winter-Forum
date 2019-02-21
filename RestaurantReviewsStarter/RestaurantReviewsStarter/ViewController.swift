@@ -8,9 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, RatingControlDelegate {
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var ratingControl: RatingControl!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        ratingControl.delegate = self
+    }
+    
+    func ratingControl(_ ratingControl: RatingControl,
+                       didSelectRating rating: Int) {
+        switch rating {
+        case 0: label.text = "Awful"
+        case 1: label.text = "Pretty bad"
+        case 2: label.text = "Just okay"
+        case 3: label.text = "Good"
+        case 4: label.text = "Amazing"
+        default: break
+        }
+    }
 }
+
+// You can move rating control delegate methods to an extension (if you want)
+
+// MARK: - RatingControlDelegate
+//extension ViewController: RatingControlDelegate {
+//    func ratingControl(_ ratingControl: RatingControl,
+//                       didSelectRating rating: Int) {
+//        switch rating {
+//        case 0: label.text = "Awful"
+//        case 1: label.text = "Pretty bad"
+//        case 2: label.text = "Just okay"
+//        case 3: label.text = "Good"
+//        case 4: label.text = "Amazing"
+//        default: break
+//        }
+//    }
+//}

@@ -8,7 +8,14 @@
 
 import UIKit
 
+protocol RatingControlDelegate: class {
+    func ratingControl(_ ratingControl: RatingControl,
+                       didSelectRating rating: Int)
+}
+
 class RatingControl: UIStackView {
+    
+    weak var delegate: RatingControlDelegate?
     
     @IBOutlet var stars: [UIButton]!
     
@@ -27,5 +34,7 @@ class RatingControl: UIStackView {
                 rating = (selectedStar == star) ? index : stars.count
             }
         }
+        
+        delegate?.ratingControl(self, didSelectRating: rating)
     }
 }
