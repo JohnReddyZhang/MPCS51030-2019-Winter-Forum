@@ -18,12 +18,15 @@ class BooksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        books = bookService.fetchBooksFromFile()
+        tableView.reloadData()
     }
     
     @IBAction func unwindToBookList(_ sender: UIStoryboardSegue) {
         guard let addBookViewController = sender.source as? AddBookViewController else { return }
         guard let book = addBookViewController.book else { return }
         books.append(book)
+        bookService.saveToFile(books: books)
         tableView.reloadData()
     }
 }

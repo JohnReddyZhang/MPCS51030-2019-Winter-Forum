@@ -39,8 +39,8 @@ class Book: NSObject, NSSecureCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(title as NSString, forKey: Keys.title.rawValue)
-        aCoder.encode(author as NSString, forKey: Keys.author.rawValue)
+        aCoder.encode(title, forKey: Keys.title.rawValue)
+        aCoder.encode(author, forKey: Keys.author.rawValue)
         aCoder.encode(category.rawValue, forKey: Keys.category.rawValue)
     }
 }

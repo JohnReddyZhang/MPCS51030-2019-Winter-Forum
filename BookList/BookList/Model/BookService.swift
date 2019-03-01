@@ -32,10 +32,14 @@ class BookService {
     }
     
     func fetchBooksFromFile() -> [Book] {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                               in: .userDomainMask).first else { return [] }
+        
+        print("Path to document directory: \(documentDirectory)")
+        let url = documentDirectory.appendingPathComponent("books")
+        
         var books: [Book]?
         do {
-            let documentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-            let url = documentsDirectory.appendingPathComponent("books")
             let data = try Data(contentsOf: url)
             books = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? [Book]
         } catch (let error) {
@@ -45,11 +49,14 @@ class BookService {
     }
     
     func saveToFile(books: [Book]) {
+        guard let documentDirectory = FileManager.default.urls(for: .documentDirectory,
+                                                         in: .userDomainMask).first else { return }
+        
+        print("Path to document directory: \(documentDirectory)")
+        let url = documentDirectory.appendingPathComponent("books")
+        
         do {
             let data = try NSKeyedArchiver.archivedData(withRootObject: books, requiringSecureCoding: true)
-            let documentDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
-            print("Path to document directory: \(documentDirectory)")
-            let url = documentDirectory.appendingPathComponent("books")
             try data.write(to: url)
         } catch (let error) {
             print(error)
