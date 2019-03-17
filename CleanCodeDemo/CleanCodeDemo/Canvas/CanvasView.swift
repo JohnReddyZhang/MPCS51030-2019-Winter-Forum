@@ -11,31 +11,23 @@ import UIKit
 // Used a few ideas from:
 // https://www.raywenderlich.com/5895-uikit-drawing-tutorial-how-to-make-a-simple-drawing-app
 class CanvasView: UIImageView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
-       var prev = CGPoint.zero
+    var previousPoint = CGPoint.zero
     
     @IBAction func didPan(_ sender: UIPanGestureRecognizer) {
         switch (sender.state) {
         case .began:
-            prev = sender.location(in: self)
+            previousPoint = sender.location(in: self)
         case .changed:
             UIGraphicsBeginImageContext(frame.size)
             guard let context = UIGraphicsGetCurrentContext() else { return }
             
-            let currentPt = sender.location(in: self)
+            let currentPoint = sender.location(in: self)
             
             image?.draw(in: bounds)
             
-            context.move(to: prev)
-            context.addLine(to: currentPt)
+            context.move(to: previousPoint)
+            context.addLine(to: currentPoint)
             
             context.setLineCap(.round)
             context.setLineWidth(10)
@@ -45,23 +37,20 @@ class CanvasView: UIImageView {
             image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
-            prev = currentPt
+            previousPoint = currentPoint
         default:
             return
         }
     }
     
-    @IBAction func didTap(_ sender: UITapGestureRecognizer){
+    @IBAction func didTap(_ sender: UITapGestureRecognizer) {
         UIGraphicsBeginImageContext(frame.size)
         guard let context = UIGraphicsGetCurrentContext() else { return }
         
-        if let i  = image
-        {
-            i.draw(in: bounds)
-        }
+        image?.draw(in: bounds)
         
-        context.addEllipse(in: CGRect(
-            origin: sender.location(in: self), size: CGSize(width: 10, height: 10)))
+        context.addEllipse(in: CGRect(origin: sender.location(in: self),
+                                      size: CGSize(width: 10, height: 10)))
         
         context.setFillColor(UIColor.red.cgColor)
         context.fillPath()
@@ -69,8 +58,4 @@ class CanvasView: UIImageView {
         image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
     }
-    
-    
-    
-    
 }

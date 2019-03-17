@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6073C730222C868E00E4665B /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073C72F222C868E00E4665B /* DrawingView.swift */; };
-		6073C732222C86E500E4665B /* drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073C731222C86E500E4665B /* drawing.swift */; };
+		6073C730222C868E00E4665B /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073C72F222C868E00E4665B /* DrawingViewController.swift */; };
+		6073C732222C86E500E4665B /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073C731222C86E500E4665B /* Drawing.swift */; };
 		60CBDB8B222C7DE600937203 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CBDB8A222C7DE600937203 /* GalleryCollectionViewController.swift */; };
 		60CBDB8D222C7FB400937203 /* CanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CBDB8C222C7FB400937203 /* CanvasViewController.swift */; };
 		60EB23FB222C55670045C33B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB23FA222C55670045C33B /* AppDelegate.swift */; };
 		60EB2402222C55670045C33B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EB2400222C55670045C33B /* Main.storyboard */; };
 		60EB2404222C55680045C33B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60EB2403222C55680045C33B /* Assets.xcassets */; };
 		60EB2407222C55680045C33B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60EB2405222C55680045C33B /* LaunchScreen.storyboard */; };
-		60EB240F222C55FA0045C33B /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB240E222C55FA0045C33B /* TableViewController.swift */; };
 		60EB2413222C6F660045C33B /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB2412222C6F660045C33B /* CanvasView.swift */; };
+		60FBE80022309D3C00C117B2 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FBE7FF22309D3C00C117B2 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6073C72F222C868E00E4665B /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
-		6073C731222C86E500E4665B /* drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drawing.swift; sourceTree = "<group>"; };
+		6073C72F222C868E00E4665B /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		6073C731222C86E500E4665B /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
 		60CBDB8A222C7DE600937203 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
 		60CBDB8C222C7FB400937203 /* CanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewController.swift; sourceTree = "<group>"; };
 		60EB23F7222C55670045C33B /* CleanCodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanCodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,8 +30,8 @@
 		60EB2403222C55680045C33B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60EB2406222C55680045C33B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60EB2408222C55680045C33B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		60EB240E222C55FA0045C33B /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		60EB2412222C6F660045C33B /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		60FBE7FF22309D3C00C117B2 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +64,43 @@
 		60EB23F9222C55670045C33B /* CleanCodeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				60FBE7FC22309AF500C117B2 /* Gallery */,
+				60FBE7FD22309B0200C117B2 /* Canvas */,
+				60FBE7FE22309B1400C117B2 /* Drawing */,
 				60EB23FA222C55670045C33B /* AppDelegate.swift */,
-				60CBDB8A222C7DE600937203 /* GalleryCollectionViewController.swift */,
-				60EB240E222C55FA0045C33B /* TableViewController.swift */,
-				60EB2412222C6F660045C33B /* CanvasView.swift */,
-				6073C72F222C868E00E4665B /* DrawingView.swift */,
-				6073C731222C86E500E4665B /* drawing.swift */,
-				60CBDB8C222C7FB400937203 /* CanvasViewController.swift */,
 				60EB2400222C55670045C33B /* Main.storyboard */,
 				60EB2403222C55680045C33B /* Assets.xcassets */,
 				60EB2405222C55680045C33B /* LaunchScreen.storyboard */,
 				60EB2408222C55680045C33B /* Info.plist */,
 			);
 			path = CleanCodeDemo;
+			sourceTree = "<group>";
+		};
+		60FBE7FC22309AF500C117B2 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				60CBDB8A222C7DE600937203 /* GalleryCollectionViewController.swift */,
+				60FBE7FF22309D3C00C117B2 /* GalleryCollectionViewCell.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		60FBE7FD22309B0200C117B2 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				60EB2412222C6F660045C33B /* CanvasView.swift */,
+				60CBDB8C222C7FB400937203 /* CanvasViewController.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		60FBE7FE22309B1400C117B2 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				6073C72F222C868E00E4665B /* DrawingViewController.swift */,
+				6073C731222C86E500E4665B /* Drawing.swift */,
+			);
+			path = Drawing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,11 +176,11 @@
 			files = (
 				60CBDB8B222C7DE600937203 /* GalleryCollectionViewController.swift in Sources */,
 				60EB2413222C6F660045C33B /* CanvasView.swift in Sources */,
-				6073C730222C868E00E4665B /* DrawingView.swift in Sources */,
-				6073C732222C86E500E4665B /* drawing.swift in Sources */,
+				6073C730222C868E00E4665B /* DrawingViewController.swift in Sources */,
+				6073C732222C86E500E4665B /* Drawing.swift in Sources */,
 				60EB23FB222C55670045C33B /* AppDelegate.swift in Sources */,
+				60FBE80022309D3C00C117B2 /* GalleryCollectionViewCell.swift in Sources */,
 				60CBDB8D222C7FB400937203 /* CanvasViewController.swift in Sources */,
-				60EB240F222C55FA0045C33B /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -78,10 +78,10 @@
             </objects>
             <point key="canvasLocation" x="1452" y="-117.39130434782609"/>
         </scene>
-        <!--Drawing View-->
+        <!--Drawing View Controller-->
         <scene sceneID="G3H-2e-ivQ">
             <objects>
-                <viewController id="FMl-G8-rE5" customClass="DrawingView" customModule="CleanCodeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="FMl-G8-rE5" customClass="DrawingViewController" customModule="CleanCodeDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLz-gf-zWs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
